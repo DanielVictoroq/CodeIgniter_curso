@@ -53,4 +53,5 @@ $route['default_controller'] = 'produtos';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['produtos'] = 'Produtos/index';
+$route['login'] = 'Usuarios/telaLogar';
+$route['cadastro'] = 'Usuarios/telaCadastro';

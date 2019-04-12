@@ -5,11 +5,17 @@ class Produtos extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->model("produtos_model");
-		$dados = $this->produtos_model->getTodos();
-		$lista = [
-			'lista' => $dados
-		];
-		$this->load->view('produtos', $lista);
+		if($this->session->has_userdata('usuario_logado' )){
+
+			$this->load->model("produtos_model");
+			$dados = $this->produtos_model->getTodos();
+			$lista = [
+				'lista' => $dados
+			];
+			$this->load->view('produtos', $lista);
+		}
+		else{
+			redirect('/login');
+		}
 	}
 }
