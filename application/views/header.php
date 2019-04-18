@@ -7,11 +7,8 @@
     <script src="<?= base_url("js/popper.min.js")?>"></script> 
     <script src="<?= base_url("js/bootstrap.min.js")?>"></script> 
     <script src="<?= base_url("js/custom.js")?>"></script> 
-    <title>CodeIgniter Projeto</title>
+    <title>Sistema de Condomínio</title>
 </head>
-
-
-<?php //var_dump($this->session->has_userdata('admin')); die(); ?>
 <?php if($this->session->has_userdata('usuario_logado' )):?>
 <header>
     <div class="container-fluid ">
