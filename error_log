@@ -1,0 +1,1 @@
+[11-Apr-2019 19:21:16 UTC] PHP Fatal error:  Cannot declare class Login_model, because the name is already in use in /home/devel8/public_html/projetos/codeigniter/application/models/Usuario_model.php on line 10

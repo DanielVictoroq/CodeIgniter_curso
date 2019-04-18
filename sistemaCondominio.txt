@@ -1,0 +1,30 @@
+Tabelas
+
+usuario [ nome_usuario, nome, sobrenome, data_nascimento, telefone, id_tipo]
+admin [ nome_usuario, password, email]
+login [ nome_usuario, password, email]
+condominio [ nome_cond , valor_cond, vlr_agua, vlr_gas, med_agua, med_gas, valor_total, vlr_caixa, sindico_atual[nome_usuario]  ]
+apartamentos [ n_apt, responsavel, med_agua, vlr_agua, med_gas, vlr_gas, vlr_total]
+servico_adicional [ id, tipo_servico, descricao ]
+situacao [ nome, ult_revisao, data_prox_rev]
+comunicados [ id_comunicado, comunicado]
+ocorrencias [ id_ocorrencia, ocorrencia, nome_usuario]
+
+Casos de Uso
+
+Admin -> acesso total 
+
+síndico -> atualizar valores (incluir, alterar), atualizar notícias (incluir, excluir, alterar), Acesso as ocorrencias, gerenciar servicos adicionais(adicionar, alterar, finalizar), mensagens, detalhes de gastos
+
+Condomino -> Criar ocorrencias, mensagens, detalhes de gastos
+
+tecnologias 
+
+CodeIgniter
+mysql
+jquery
+css
+
+funcionalidades
+
+servicos adicionais -> cada servico que precisa ser feito no condominio, valor agregado para dividir aos condominos.
