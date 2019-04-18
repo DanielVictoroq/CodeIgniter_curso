@@ -1,9 +1,8 @@
 <?php require('header.php');?>
-<div class="container">
-    <h1>Produtos <a href="usuarios/logout" class="btn btn-success mt-2" style="float: right;">Logout</a></h1>
-    
+<div class="container mt-5">
+    <h1>Produtos</h1>
     <table class="table"> 
-        <thead>
+        <thead class="table-dark">
             <tr>
                 <th>Nome</th>
                 <th>Descrição</th>
@@ -22,31 +21,4 @@
             <?php endforeach;?>
         <?php endif;?>
     </table>
-    <div class="mt-5">
-    <table class="table"> 
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>Data de Nascimento</th>
-                <th>Telefone</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr >
-                <td><?echo $this->session->userdata('usuario_logado')['nome'];?></td>
-                <td><?echo $this->session->userdata('usuario_logado')['sobrenome'];?></td>
-                <td>
-                    <?$data= new DateTime($this->session->userdata('usuario_logado')['dataNascimento']);
-                      echo $data->format('d/m/Y');?>
-                </td>
-                <td><?echo $this->session->userdata('usuario_logado')['telefone'];?></td>
-            </tr>
-        </tbody>
-    </table>
-
-
-
-    </div>
-    
 </div>

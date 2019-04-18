@@ -6,7 +6,6 @@
             <input type="text" name="nome" class="form-control mt-3" id="nome" placeholder="Usuário">
             <input type="password" name="senha" class="form-control mt-3" id="senha" placeholder="Senha">
             <button type="submit" class="btn btn-success mt-3">Logar</button>
-            <a href="cadastro" class="btn btn-link mt-3">Cadastrar</a>
         </form>
     </div>
 </div>

@@ -55,3 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Usuarios/telaLogar';
 $route['cadastro'] = 'Usuarios/telaCadastro';
+$route['dados'] = 'Usuarios/dados';
+$route['cadastrar-produto'] = 'Produtos/cadastrarProdutos';
+$route['tela-produto'] = 'Produtos/telaCadastroProduto';
+$route['logout'] = 'Usuarios/logout';

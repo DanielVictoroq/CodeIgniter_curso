@@ -1,80 +1,22 @@
-
 <?php require('header.php') ?>
+
 <div class="container">
     <h1 class="mb-4">Cadastro</h1>
-
-    <?php  
-
-        echo form_open("usuarios/novo");
-        echo form_label("Nome de Usuário", "nome_usuario");
-        echo form_input([
-            "name" => "nome_usuario",
-            "id" =>"nome_usuario",
-            "class" => "form-control",
-            "maxlength" => 255
-        ]);
-        echo form_label("Senha", "senha");
-        echo form_input([
-            "name" => "senha",
-            "id" =>"senha",
-            "class" => "form-control",
-            'type' =>'password',
-            "maxlength" => 255
-        ]);
-        echo form_label("E-mail", "email");
-        echo form_input([
-            "name" => "email",
-            "id" =>"email",
-            'type'=>'email',
-            "class" => "form-control",
-            "maxlength" => 255
-        ]);
-        
-        echo form_label("Nome", "nome");
-        echo form_input([
-            "name" => "nome",
-            "id" =>"nome",
-            "class" => "form-control",
-            "maxlength" => 255
-        ]);
-        echo form_label("Sobrenome", "email");
-        echo form_input([
-            "name" => "sobrenome",
-            "id" =>"sobrenome",
-            "class" => "form-control",
-            "maxlength" => 255,
-            "required" => 'true'
-        ]);
-        echo form_label("Gênero", "senha");
-        echo form_input([
-            "name" => "genero",
-            "id" =>"genero",
-            "class" => "form-control",
-            "maxlength" => 255,
-            "required" => 'true'
-        ]);
-        echo form_label("Data de Nascimento", "senha");
-        echo form_input([
-            "name" => "date",
-            "id" =>"date",
-            "class" => "form-control",
-            "maxlength" => 255,
-            'type' => 'date',
-            "required" => 'true'
-        ]);
-        echo form_label("telefone", "senha");
-        echo form_input([
-            "name" => "fone",
-            "id" =>"fone",
-            "class" => "form-control",
-            "maxlength" => 255,
-            "required" => 'true'
-        ]);
-        echo form_button([
-            "class" => "btn btn-primary mt-4 col-md-3",
-            "type" => "submit",
-            "content" => "Cadastrar"
-        ]);
-        echo form_close();
-    ?>
+    <div  class="alert alert-success" role="alert">
+        Cadastro Efetuado com Sucesso
+        </div>
+    <div class="alert alert-danger" role="alert">
+        Usuário já Cadastrado
+    </div>
+    <form action="usuarios/novo" method="POST" id="formCadastro">
+        <input type="text" name="nome_usuario" id = "nome_usuario" class="form-control" placeholder="Nome de Usuário">
+        <input type="password" name="senha" id = "senha" class="form-control"  placeholder="Senha">
+        <input type="email" name="email" id = "email" class="form-control" placeholder="E-mail">
+        <input type="text" name="nome" id = "nome" class="form-control" placeholder="Nome">
+        <input type="text" name="sobrenome" id = "sobrenome" class="form-control" placeholder="Sobrenome">
+        <input type="text" name="tipo" id = "tipo" class="form-control" placeholder="Tipo Usuário">
+        <input type="date" name="date" id = "date" class="form-control" placeholder="Data de Nascimento">
+        <input type="text" name="fone" id = "fone" class="form-control" placeholder="Telefone">
+        <button class = "btn btn-primary mt-4 col-md-3" type="submit">Cadastrar</button>
+    </form>
 </div>
